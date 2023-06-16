@@ -41,7 +41,9 @@ const App = () => {
       <div>
         <Filter filterData={filterData}></Filter>
       </div>
-      <div>{loading ? <Spinner /> : <Cards courses={courses} />}</div>
+      <div className="w-11/12 max-w-[1200px] mx-auto flex flex-wrap justify-center items-center">
+        {loading ? <Spinner /> : <Cards courses={courses} />}
+      </div>
     </div>
   );
 };
