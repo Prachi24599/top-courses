@@ -40,7 +40,7 @@ const App = () => {
         <Filter filterData={filterData}></Filter>
       </div>
       <div>
-        {setLoading ? <Spinner></Spinner> : <Cards courses={courses}></Cards>}
+        {loading ? <Spinner></Spinner> : <Cards courses={courses}></Cards>}
       </div>
     </div>
   );
