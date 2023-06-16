@@ -6,19 +6,20 @@ const Cards = ({ courses }) => {
   let allCourses = [];
 
   //It returns a list of all courses received from API response
-  /*const getCourses = () => {
+  const getCourses = () => {
     Object.values(courses).forEach((courseCategory) => {
       courseCategory.forEach((course) => {
         allCourses.push(course);
       });
     });
     return allCourses;
-  };*/
+  };
+  getCourses();
   return (
     <div>
-      {/* {getCourses().map((course) => {
-        return <Card course={course} />;
-      })} */}
+      {getCourses().map((course) => {
+        return <Card key={course.id} course={course} />;
+      })}
     </div>
   );
 };
