@@ -38,11 +38,13 @@ const App = () => {
       <div>
         <Navbar></Navbar>
       </div>
-      <div>
-        <Filter filterData={filterData}></Filter>
-      </div>
-      <div className="w-11/12 max-w-[1200px] mx-auto flex flex-wrap justify-center items-center">
-        {loading ? <Spinner /> : <Cards courses={courses} />}
+      <div className="bg-bgDark2">
+        <div>
+          <Filter filterData={filterData}></Filter>
+        </div>
+        <div className="w-11/12 max-w-[1200px] mx-auto flex flex-wrap justify-center items-center">
+          {loading ? <Spinner /> : <Cards courses={courses} />}
+        </div>
       </div>
     </div>
   );
