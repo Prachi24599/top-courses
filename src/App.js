@@ -19,7 +19,7 @@ const App = () => {
       const res = await fetch(apiUrl);
       const output = await res.json();
       //Save output into a variable
-      console.log(output);
+      // console.log(output);
       setCourses(output.data);
     } catch (error) {
       toast.error(error);
@@ -34,7 +34,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <div>
         <Navbar></Navbar>
       </div>

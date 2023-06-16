@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 
 const Cards = ({ courses }) => {
-  console.log(courses);
+  // console.log(courses);
 
   //It returns a list of all courses received from API response
   const getCourses = () => {
