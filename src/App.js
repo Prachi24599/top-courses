@@ -11,6 +11,7 @@ const App = () => {
   // const [courses, setCourses] = useState([]); //read bottom comment
 
   const [loading, setLoading] = useState(true);
+  const [category, setCategory] = useState(filterData[0].title);
 
   const fetchData = async () => {
     //we need to show loader until we get data
@@ -40,10 +41,18 @@ const App = () => {
       </div>
       <div className="bg-bgDark2">
         <div>
-          <Filter filterData={filterData}></Filter>
+          <Filter
+            filterData={filterData}
+            category={category}
+            setCategory={setCategory}
+          ></Filter>
         </div>
         <div className="w-11/12 max-w-[1200px] mx-auto flex flex-wrap justify-center items-center">
-          {loading ? <Spinner /> : <Cards courses={courses} />}
+          {loading ? (
+            <Spinner />
+          ) : (
+            <Cards courses={courses} category={category} />
+          )}
         </div>
       </div>
     </div>
